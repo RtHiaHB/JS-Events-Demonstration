@@ -17,21 +17,25 @@
                 <a href="#">A</a>
             </p>
         </div>
-        <h2>Captured events for elements highlighted in <span>chartreuse</span>.</h2>
+        <h2>Captured events for elements highlighted in <span>Dark blue</span>.</h2>
 
         <script>
             let elems = document.querySelectorAll('div.wrap, .wrap p, .wrap a')
 
             function showAlert(event) {
                 clear()
-                this.style.backgroundColor = 'chartreuse'
+                this.style.backgroundColor = '#00004D'
+                this.style.color = 'white'
                 event.stopPropagation()
             }
 
             function clear() {
-                document.querySelector('DIV.wrap').style.backgroundColor = 'gray'
-                document.querySelector('.wrap p').style.backgroundColor = 'gray'
-                document.querySelector('.wrap a').style.backgroundColor = 'gray'
+                document.querySelector('DIV.wrap').style.backgroundColor = 'white'
+                document.querySelector('DIV.wrap').style.color = 'black'
+                document.querySelector('.wrap p').style.backgroundColor = 'white'
+                document.querySelector('.wrap p').style.color = 'black'
+                document.querySelector('.wrap a').style.backgroundColor = 'white'
+                document.querySelector('.wrap a').style.color = 'blue'
             }
         
             for(let elem of elems) {

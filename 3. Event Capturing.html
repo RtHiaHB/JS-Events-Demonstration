@@ -17,20 +17,23 @@
                 <a href="#">A</a>
             </p>
         </div>
-        <h2>Captured elements show in <span>chartreuse</span>.</h2>
+        <h2>Captured elements show in <span>dark blue</span>.</h2>
 
         <script>
             let elems = document.querySelectorAll('div.wrap, .wrap p, .wrap a')
 
             function showTagName() {
                 clear(this.tagName)
-                this.style.backgroundColor = 'chartreuse'
+                this.style.backgroundColor = 'midnightblue'
+                this.style.color = 'white'
             }
 
             function clear(tagName) {
                 if (tagName == 'DIV') {
                     document.querySelector('.wrap p').style.backgroundColor = 'gray'
+                    document.querySelector('.wrap p').style.color = 'black'
                     document.querySelector('.wrap a').style.backgroundColor = 'gray'
+                    document.querySelector('.wrap a').style.color = 'blue'
                 }
                 else if (tagName == 'P') {
                     document.querySelector('.wrap a').style.backgroundColor = 'gray'
